@@ -1,7 +1,14 @@
 #bigtext{font-size: 85; color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 padding-top: 50px; padding-bottom: 0px;}
 #smallmentions{font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
+#bodyheaders{font-family:monospace; color: coral; font-size: 35px;}
+
+#smallerheaders{font-family: monospace; color:darkcyan; font-size: 25px;}
+#text{color: darkgoldenrod; font-size: 20px; font-family: monospace;}
+
+.split-para      { display:block;margin:10px;}
+.split-para span { display:block;float:right;width:50%;margin-left:10px;}
 
 body{background-color:skyblue}
 
-button {padding: 25px; border-color: cadetblue; font-family: fantasy;}
+button {padding: 25px; border-color: cadetblue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 20px;}
