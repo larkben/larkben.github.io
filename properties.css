@@ -6,6 +6,13 @@
     padding-bottom: 0px;
 }
 
+.topdiv{
+    background-color: rgb(255, 102, 0);
+    width: 100vw;
+    padding: 0px;
+    margin: 0 auto;
+}
+
 #smallmentions{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
