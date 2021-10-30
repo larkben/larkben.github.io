@@ -1,3 +1,10 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
 #bigtext{
     font-size: 80px; 
     color:white; 
@@ -41,10 +48,7 @@
     font-family: monospace;
 }
 
-.split-para      { display:block;margin:10px;}
-.split-para span { display:block;float:right;width:50%;margin-left:10px;}
-
-#reasons {
+#middleDiv {
     margin-left: auto;
     margin-right: auto;
     width: 87.5%;
