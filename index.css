@@ -1,28 +1,44 @@
 body {
-    background-color: rgb(3, 3, 20);
+    background-color: rgb(1, 1, 20);
 }
 
-div {
-    border: 3px dotted red;
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: center;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: rgb(22, 21, 21);
 }
 
 .title_main {
     color: white;
-    padding: 100px;
     font-size: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
 .title_shader {
-    background-color: rgb(22, 70, 201);
+    background-color: rgb(1, 1, 20);
 }
 
-.directory {
-    background-color: aqua;
+.title_under {
     text-align: center;
-    min-height: 100px;
-    max-width: 400px;
+    color: white;
 }
 
 
