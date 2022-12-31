@@ -1,11 +1,17 @@
 body {
-    background-color: rgb(4, 4, 102);
+    background-color: rgb(0, 0, 0);
 }
 
 ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(32, 32, 32);
+    padding-left:0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow:hidden;
 }
   
 li {
@@ -25,6 +31,10 @@ li a:hover {
     background-color: rgb(245, 100, 4);
 }
 
+h2 {
+    padding-top: 100px;
+}
+
 .title_main {
     color: white;
     font-size: 100px;
@@ -33,11 +43,30 @@ li a:hover {
 }
 
 .title_shader {
-    background-color: rgb(4, 4, 102);
+    background-color: rgb(0, 0, 0);
 }
 
 .title_under {
     text-align: center;
+    color: white;
+}
+
+.pagefont {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body_text {
+    color: white;
+    text-align: center;
+    width: 600px;
+}
+
+b:hover {
+    color: blue;
+}
+
+.footer_text {
+    padding-top: 300px;
     color: white;
 }
 
