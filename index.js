@@ -1,26 +1,14 @@
-const btn = document.getElementsByClassName("btnSite")[0];
-// Problem was fixed with [0]
+const title = document.getElementsByClassName("title_main")[0];
 
-const WORD = document.getElementById('words');
-const WORDS2 = document.getElementById('words2');
+function random(number) {
+    return Math.floor(Math.random() * (number+1));
+}
 
-const black = '0,0,0';
-const white = '255,255,255';
-
-let isblack = true;
-
-btn.addEventListener('click', () => {
-    if (isblack === true) {
-        document.body.style.backgroundColor = `rgb(${white})`;
-        // String Interpolation
-        isblack = false;
-        WORD.style.color = `rgb(${black})`;
-        WORDS2.style.color = `rgb(${black})`;
-    }
-    else {
-        document.body.style.backgroundColor = `rgb(${black})`
-        isblack = true;
-        WORD.style.color = `rgb(${white})`;
-        WORDS2.style.color = `rgb(${black})`;
-    }
+function revealName() {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    title.style.color = rndCol;
+    console.log("Move moved!");
+}
+title.addEventListener("click",  () => {
+    revealName();
 });
