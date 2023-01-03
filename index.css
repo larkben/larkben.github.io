@@ -5,7 +5,6 @@ body {
 ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
     padding-left:0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -16,15 +15,19 @@ ul {
   
 li {
     float: center;
+    border: 5px solid black;
 }
   
 li a {
     display: block;
-    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     background-color: white;
+    /*
+    border-color: #000000;
+    border: 5px solid;
+    */
 }
   
   /* Change the link color to #111 (black) on hover */
@@ -42,20 +45,20 @@ div {
 }
 */
 
-.title_main {
+#words {
     color: white;
+}
+
+#words2 {
+    color: black;
+}
+
+
+.title_main {
+    /*color: white; */
     font-size: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-}
-
-.title_shader {
-    background-color: rgb(0, 0, 0);
-}
-
-.title_under {
-    text-align: center;
-    color: white;
 }
 
 .pagefont {
@@ -63,21 +66,17 @@ div {
 }
 
 .body_text {
-    color: white;
-    text-align: center;
     width: 600px;
     font-size: 20px;
 }
 
 .body_header {
-    color: white;
-    text-align: center;
     width: 600px;
     font-size: 30px;
 }
 
 b:hover {
-    color: blue;
+    color: rgb(40, 136, 226);
 }
 
 .footer_text {
@@ -85,14 +84,14 @@ b:hover {
     color: white;
 }
 
-.toggle {
+.btnSite {
     position:absolute; 
     top:10; 
     right:10;
     left: 40;
     appearance: none;
     background-color: #ffffff;
-    border: 2px solid #1A1A1A;
+    border: 2px solid #000000;
     border-radius: 15px;
     box-sizing: border-box;
     color: #000000;
@@ -117,16 +116,16 @@ b:hover {
     will-change: transform;
 }
 
-.toggle:disabled {
+.btnSite:disabled {
     pointer-events: none;
 }
 
-.toggle:hover {
+.btnSite:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-.toggle:active {
+.btnSite:active {
     box-shadow: none;
     transform: translateY(0);
 }
