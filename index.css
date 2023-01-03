@@ -36,14 +36,12 @@ li a:hover {
 }
 
 h2 {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
-/* // The dotted border to get a red border around all divs
 div {
     border: 1px dotted red;
 }
-*/
 
 #words {
     color: white;
@@ -51,6 +49,10 @@ div {
 
 #words2 {
     color: black;
+}
+
+#info {
+    color: crimson;
 }
 
 
