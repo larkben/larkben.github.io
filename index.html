@@ -3,7 +3,12 @@
 
     <head>
         <title> Benjamin Larkey 🥷</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">\
+        <style>
+            [v-cloak] {
+                display: none;
+            }
+        </style>
     </head>
 
     <body>
@@ -23,13 +28,44 @@
                 </div>
             </center>
         </div>
-        <div>
-            <center>
-                <h2 class="body_header" style="color: white; font-size: 30px;"> Welcome! </h2>
-                <p class="body_text" style="color:white; font-size: 25px;"> Hello, my name is <b>Benjamin Larkey</b>. I am a college student attending <b>Northern Illinois University</b> also known as <i> NIU </i>. 
-                I am here studying computer science. My main focuses are on <b>Web Development</b> <i>(Full Stack)</i>, <b>C++ and Rust</b>. </p>
-            </center>
-        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <center>
+            <div id="greeting" v-cloak style="color: white; padding-top: 50px; font-size: 30px;">{{ message }}</div>
+            <div style="width: 600px;" id="info-who-ben" v-cloak>
+                <ul>
+                    <li style="border: none !important;"><a style="background-color: rgb(56, 56, 56) !important;" v-on:click="toggleInfo">{{ info1 }}</a></li>
+                    <li v-if="seeInfo1" style="border: none !important;"><a style="background-color: rgb(156, 76, 0) !important;" v-on:click="toggleInfo"> Hi, my name is Benjamin Larkey. I am a computer science student. <br> <img src="images/whoben.jpg" alt="Benjamin holding a fish" style="width: 200px; height: 250px; padding-top: 25px;"> </a></li>
+                </ul>
+            </div>
+        </center>
+
+        <script>
+            const { createApp } = Vue
+
+            createApp({
+                data() {
+                    return {
+                        message: 'Welcome!'
+                    }
+                }
+            }).mount('#greeting')
+
+            createApp({
+                data() {
+                    return {
+                        info1: 'Who is Benjamin Larkey?',
+                        seeInfo1: false
+                    }
+                },
+                methods: {
+                    toggleInfo: function() {
+                        this.seeInfo1 = !this.seeInfo1
+                    }
+                }
+            }).mount('#info-who-ben')
+        </script>
+
         <script src="index.js"></script> 
     </body>
 
