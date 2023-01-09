@@ -41,6 +41,10 @@ h2 {
     padding-top: 50px;
 }
 
+h2:hover {
+    color: white;
+}
+
 .title_main {
     color: white;
     font-size: 100px;

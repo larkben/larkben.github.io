@@ -31,11 +31,18 @@
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
         <center>
-            <div id="greeting" v-cloak style="color: white; padding-top: 50px; font-size: 30px;">{{ message }}</div>
+            <h2> Click on any of the prompts below for more info. </h2>
             <div style="width: 600px;" id="info-who-ben" v-cloak>
                 <ul>
-                    <li style="border: none !important;"><a style="background-color: rgb(56, 56, 56) !important;" v-on:click="toggleInfo">{{ info1 }}</a></li>
-                    <li v-if="seeInfo1" style="border: none !important;"><a style="background-color: rgb(156, 76, 0) !important;" v-on:click="toggleInfo"> Hi, my name is Benjamin Larkey. I am a computer science student. <br> <img src="images/whoben.jpg" alt="Benjamin holding a fish" style="width: 200px; height: 250px; padding-top: 25px;"> </a></li>
+                    <li style="border: none !important;"><a style="background-color: rgb(5, 155, 0) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoOne">{{ info1 }}</a></li>
+                    <li v-if="seeInfo1" style="border: none !important;"><a style="background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfoOne"> Hi, 
+                        my name is Benjamin Larkey. I am a Computer Science student. <br> <img src="images/whoben.jpg" alt="Benjamin holding a fish" style="width: 200px; height: 250px; padding-top: 25px;"> </a></li>
+                    <li style="border: none !important;"><a style="background-color: rgb(0, 255, 42) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoTwo">{{ info2 }}</a></li>
+                    <li v-if="seeInfo2" style="border: none !important;"><a style="background-color: rgb(75, 75, 75)!important; color: white !important; font-size: 20px;" v-on:click="toggleInfoTwo"> I 
+                        am currently attending Northern Illinois University and am studying Computer Science with an emphasis on Software Development. I completed my associates in Computer Science at Sauk Valley Community College. </a></li>
+                    <li style="border: none !important;"><a style="background-color: rgb(5, 155, 0) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoThree">{{ info3 }}</a></li>
+                    <li v-if="seeInfo3" style="border: none !important;"><a style="background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfoThree"> Some of my skills include my ability to program
+                    in C++ at a high level, knowledge of data structures and algorithm timing <i> (Big O) </i> . I also have high interest and skills in Web Development and Software Development. </a></li>
                 </ul>
             </div>
         </center>
@@ -46,21 +53,23 @@
             createApp({
                 data() {
                     return {
-                        message: 'Welcome!'
-                    }
-                }
-            }).mount('#greeting')
-
-            createApp({
-                data() {
-                    return {
                         info1: 'Who is Benjamin Larkey?',
-                        seeInfo1: false
+                        seeInfo1: false,
+                        info2: 'Education?',
+                        seeInfo2: false,
+                        info3: 'Skills?',
+                        seeInfo3: false
                     }
                 },
                 methods: {
-                    toggleInfo: function() {
+                    toggleInfoOne: function() {
                         this.seeInfo1 = !this.seeInfo1
+                    },
+                    toggleInfoTwo: function() {
+                        this.seeInfo2 = !this.seeInfo2
+                    },
+                    toggleInfoThree: function() {
+                        this.seeInfo3 = !this.seeInfo3
                     }
                 }
             }).mount('#info-who-ben')
