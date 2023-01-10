@@ -35,7 +35,7 @@
             <div id="how-contact" v-cloak>
                 <center>
                     <ul>
-                        <li style="border: none !important; display: block; width: 600px;"><a style="display: block; background-color: rgb(255, 255, 255) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfo"> Click Here </a></li>
+                        <li style="border: none !important; display: block; width: 600px;"><a style="display: block; background-color: rgb(255, 255, 255) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfo"> {{ Title }} </a></li>
                         <li v-if="seeInfo" style="border: none !important; display: block; width: 600px;"><a style="display: block; background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfo"> Below you can find the following channels for contacting me. {{ emInfo }} , {{ discordInfo }} , {{ linkedIn }} and {{ gitInfo }}. </a></li>
                     </ul>
                 </center>
@@ -49,10 +49,16 @@
             createApp({
                 data() {
                     return {
+                        // Header
+                        Title: "Click Here",
+                        hTitle: "Click Here",
+                        cTitle: "Collaspe",
+                        // Contact Infos
                         emInfo: "Email: spartinofarrows@gmail.com",
                         discordInfo: "Discord: BenSon15#2100",
                         linkedIn: "LinkedIn: Benjamin Larkey",
                         gitInfo: "Github: larkben (Benjamin Larkey)",
+                        // Boolean Values
                         seeInfo: false
                     }
                 },
