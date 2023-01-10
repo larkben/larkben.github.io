@@ -4,6 +4,11 @@
     <head>
         <title> Contact Info 📄</title>
         <link rel="stylesheet" href="index.css">
+        <style>
+            [v-cloak] {
+                display: none;
+            }
+        </style>
     </head>
 
     <body>
@@ -23,21 +28,41 @@
                 </div>
             </center>
         </div>
-            <div>
+        <div>
+            <center>
+                <h2> Here you can find a few ways to contact me. </h2>
+            </center>
+            <div id="how-contact" v-cloak>
                 <center>
-                    <div style="width: 600px;">
-                        <h2 style="color: white;"> Link Tree: </h2>
-                        <ul>
-                            <li><a class="pagefont" href="https://discord.com/"> Discord: BenSon15 #2100 </a></li>
-                            <li><a class="pagefont" href="https://github.com/larkben"> Github: Benjamin Larkey </a></li>
-                            <li><a class="pagefont" href=""> Email: spartinofarrows@gmail.com </a></li>
-                            <li><a class="pagefont" href="https://www.snapchat.com/"> Snapchat: benlark03 </a></li>
-                            <li><a class="pagefont" href="https://www.youtube.com/channel/UCPhc1hSUXdJqm0EDc1MLbsw">Youtube: ErgoBenjamin </a></li>
-                        </ul> 
-                    </div>
+                    <ul>
+                        <li style="border: none !important; display: block; width: 600px;"><a style="display: block; background-color: rgb(255, 255, 255) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfo"> Click Here </a></li>
+                        <li v-if="seeInfo" style="border: none !important; display: block; width: 600px;"><a style="display: block; background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfo"> Below you can find the following channels for contacting me. {{ emInfo }} , {{ discordInfo }} , {{ linkedIn }} and {{ gitInfo }}. </a></li>
+                    </ul>
                 </center>
             </div>
-        <script src="index.js"></script> 
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="index.js"></script>
+        <script>
+            const { createApp } = Vue
+
+            createApp({
+                data() {
+                    return {
+                        emInfo: "Email: spartinofarrows@gmail.com",
+                        discordInfo: "Discord: BenSon15#2100",
+                        linkedIn: "LinkedIn: Benjamin Larkey",
+                        gitInfo: "Github: larkben (Benjamin Larkey)",
+                        seeInfo: false
+                    }
+                },
+                methods: {
+                    toggleInfo: function() {
+                        this.seeInfo = !this.seeInfo
+                    }                  
+                }
+            }).mount('#how-contact')
+        </script>
     </body>
 
 </html>

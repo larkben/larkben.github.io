@@ -29,19 +29,24 @@
             </center>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <div>
+            <center>
+                <h2> Welcome to Benjamin's Site </h2>
+                <p style="color: white; font-size: 20px;"> Here you can click on the boxes and look around to learn more about myself. <br> Theres nothing in here too deep; rather a quick summary so feel free to skim. </p>
+            </center>
+        </div>
 
         <center>
-            <h2> Click on any of the prompts below for more info. </h2>
             <div style="width: 600px;" id="info-who-ben" v-cloak>
                 <ul>
-                    <li style="border: none !important;"><a style="background-color: rgb(5, 155, 0) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoOne">{{ info1 }}</a></li>
-                    <li v-if="seeInfo1" style="border: none !important;"><a style="background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfoOne"> Hi, 
+                    <li style="border: none !important; display: block;"><a style=" display: block; background-color: rgb(255, 255, 255) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoOne">{{ info1 }}</a></li>
+                    <li v-if="seeInfo1" style="border: none !important; display: block;"><a style="display: block; background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfoOne"> Hi, 
                         my name is Benjamin Larkey. I am a Computer Science student. <br> <img src="images/whoben.jpg" alt="Benjamin holding a fish" style="width: 200px; height: 250px; padding-top: 25px;"> </a></li>
-                    <li style="border: none !important;"><a style="background-color: rgb(0, 255, 42) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoTwo">{{ info2 }}</a></li>
-                    <li v-if="seeInfo2" style="border: none !important;"><a style="background-color: rgb(75, 75, 75)!important; color: white !important; font-size: 20px;" v-on:click="toggleInfoTwo"> I 
+                    <li style="border: none !important; display: block;"><a style=" display: block; background-color: rgb(255, 255, 255) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoTwo">{{ info2 }}</a></li>
+                    <li v-if="seeInfo2" style="border: none !important; display: block;"><a style="display: block; background-color: rgb(53, 53, 53)!important; color: white !important; font-size: 20px;" v-on:click="toggleInfoTwo"> I 
                         am currently attending Northern Illinois University and am studying Computer Science with an emphasis on Software Development. I completed my associates in Computer Science at Sauk Valley Community College. </a></li>
-                    <li style="border: none !important;"><a style="background-color: rgb(5, 155, 0) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoThree">{{ info3 }}</a></li>
-                    <li v-if="seeInfo3" style="border: none !important;"><a style="background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfoThree"> Some of my skills include my ability to program
+                    <li style="border: none !important; display: block;"><a style="display: block; background-color: rgb(255, 255, 255) !important; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" v-on:click="toggleInfoThree">{{ info3 }}</a></li>
+                    <li v-if="seeInfo3" style="border: none !important; display: block;"><a style="display: block; background-color: rgb(53, 53, 53) !important; color: white !important; font-size: 20px;" v-on:click="toggleInfoThree"> Some of my skills include my ability to program
                     in C++ at a high level, knowledge of data structures and algorithm timing <i> (Big O) </i> . I also have high interest and skills in Web Development and Software Development. </a></li>
                 </ul>
             </div>
