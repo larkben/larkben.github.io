@@ -8,3 +8,5 @@ I am most well known for my work in...
 - smart contracts
 - systems engineering
 - web stack (backend and frontend)
+
+Everything is impossible when you never attempt it. 
