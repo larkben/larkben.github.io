@@ -18,6 +18,8 @@ I used to ask these same type of questions and during my early and late years of
 
 The truth about people who earn money quickly and lack the ability to fully understand how to properly use it is so true. It could not be more true. If you win 500,000 and have only every been used to minimum wage... you will spend it very stupidly and not fully understand it's power and weight.
 
+</p>
+
 It took me 4 years to fully understand these following things:
 
 1. The money isn't coming with you to the grave.
